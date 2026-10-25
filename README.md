@@ -17,12 +17,14 @@ Jeu de bataille développé en Java 21, jouable dans un terminal. Le projet util
 ## Technologies utilisées
 
 Java 21 : langage de programmation.
-Maven : gestion du projet et des dépendances.
-Hibernate : persistance des données.
-PostgreSQL : base de données relationnelle.
-Règles et choix de conception
 
-## Partis pris
+Maven : gestion du projet et des dépendances.
+
+Hibernate : persistance des données.
+
+PostgreSQL : base de données relationnelle.
+
+## Règles et choix de conception
 
 ### **Gestion des égalités**
 
