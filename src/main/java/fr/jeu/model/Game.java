@@ -102,6 +102,12 @@ public class Game {
     }
 
     public RoundResult playRound() {
+        if (isFinished()) {
+            throw new IllegalStateException(
+                    "Impossible de jouer : la partie est déjà terminée."
+            );
+        }
+
         if (isRoundLimitReached()) {
             finish();
             throw new IllegalStateException(
