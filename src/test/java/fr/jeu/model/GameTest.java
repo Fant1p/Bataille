@@ -68,8 +68,9 @@ class GameTest {
 
         assertNull(winner);
         assertEquals(1, game.getRoundsPlayed());
-        assertFalse(game.isFinished());
+        assertTrue(game.isFinished());
         assertTrue(game.isRoundLimitReached());
+        assertEquals(GameStatus.TERMINEE, game.getStatus());
     }
 
     @Test

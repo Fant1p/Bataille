@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS partie (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    date_fin TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    nombre_joueurs INTEGER NOT NULL CHECK (nombre_joueurs >= 2),
+    status VARCHAR(20) NOT NULL DEFAULT 'TERMINEE'
+    CHECK (status IN ('TERMINEE', 'ANNULEE'))
+);
+
+CREATE TABLE IF NOT EXISTS joueur_partie (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    partie_id BIGINT NOT NULL
+    REFERENCES partie(id) ON DELETE CASCADE,
+    nom_joueur VARCHAR(50) NOT NULL,
+    gagnant BOOLEAN NOT NULL DEFAULT FALSE,
+    cartes_restantes INTEGER NOT NULL
+    CHECK (cartes_restantes >= 0),
+    UNIQUE (partie_id, nom_joueur)
+);
