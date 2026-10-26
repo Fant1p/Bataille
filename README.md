@@ -89,3 +89,5 @@ Amélioration de l'expérience utilisateur dans le terminal.
 Enrichissement des statistiques des parties sauvegardées.
 
 Ajout de nouveaux modes de jeu.
+
+Modification des règles de jeu : Jouer une carte face cachée lors d'une égalité avant de jouer une seconde carte visible. Cela permettra de changer la gestion des limites de manche.
