@@ -28,16 +28,17 @@ PostgreSQL : base de données relationnelle.
 
 ### **Gestion des égalités**
 
-Lorsqu'au moins deux joueurs jouent une carte de même valeur maximale, une égalité est détectée. Le traitement de cette égalité suit les règles définies par le jeu.
+Lorsqu'au moins deux joueurs jouent une carte de même valeur maximale, une égalité est détectée.
 
-À compléter : préciser si les joueurs concernés rejouent une carte, si les autres joueurs sont exclus de la résolution de l'égalité et comment le gagnant de la manche est finalement déterminé.
+Lors de l'égalité, un "duel" est créé entre les joueurs concernés. Chaque joueurs rejouent une carte face visible. Le processus continue jusqu'à ce qu'un joueur remporte la manche. 
+Si, au cours de l'égalité, un joueur n'a plus la possibilité de continuer, il est éliminé. Le duel se termine également dans le cas où il ne reste qu'un seul joueur dans le duel.
 
 ### **Limitation du nombre de manches**
 
 Une partie est limitée à un nombre maximal de manches afin d'éviter qu'elle ne se prolonge indéfiniment.
 Cette limite permet également de définir une condition de fin lorsque personne n'a remporté la partie avant son atteinte.
 
-À compléter : indiquer le nombre maximal de manches retenu et expliquer comment le résultat final est déterminé si la limite est atteinte sans vainqueur.
+Pour le bien des tests, une limitation dans les manches a été établis à 10 000 manches dans un premier temps. Une partie pouvant dépasser rapidement les 100 000 manches. 
 
 ### **Fin d'une partie**
 
